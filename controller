@@ -1,0 +1,98 @@
+package sample;
+
+import javafx.fxml.FXML;
+
+import javafx.print.PrinterJob;
+import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
+
+public class Controller  {
+
+    @FXML
+    RadioButton RadioMale;
+    @FXML
+    RadioButton RadioFemale;
+    @FXML
+    TextField PtHeight, FourMl, FiveMl, SixMl, SevenMl, EightMl;
+    @FXML
+    ImageView ImgFirst, ImgSecond;
+    @FXML
+    VBox VBoxDoc;
+    @FXML
+    Label PtHeightLable, PtHeightLable2, EasterEgg;
+
+
+    public void HeightInput(){
+
+        // convert String input "PtHeight" to integer
+        int i = Integer.parseInt(PtHeight.getText());
+
+        //convert cm to in
+        double h = i * 0.3937;
+
+
+        double pbwM = 50 + 2.3 *(h-60); //Male Patients
+        double pbwF = 45.5 + 2.3 *(h-60); // Female Patients
+
+        if(RadioFemale.isSelected()) pbwM=pbwF;
+
+        double four = pbwM*4;
+        double five = pbwM*5;
+        double six = pbwM*6;
+        double seven = pbwM*7;
+        double eight = pbwM*8;
+
+        //round numbers
+        four = Math.round(four * 1)/1;
+        five = Math.round(five * 1)/1;
+        six = Math.round(six * 1)/1;
+        seven = Math.round(seven * 1)/1;
+        eight = Math.round(eight * 1)/1;
+
+        //cast double to int
+        int four1 =(int)four;
+        int five1 =(int)five;
+        int six1 =(int)six;
+        int seven1 =(int)seven;
+        int eight1 =(int)eight;
+
+        // convert int back to String to be able to print Vt results in TextFields
+        String fourStr = " "+ four1;
+        String fiveStr = " "+ five1;
+        String sixStr = " "+ six1;
+        String sevenStr = " "+ seven1;
+        String eightStr = " "+ eight1;
+
+        //set text to resulting Vt window
+        FourMl.setText(fourStr);
+        FiveMl.setText(fiveStr);
+        SixMl.setText(sixStr);
+        SevenMl.setText(sevenStr);
+        EightMl.setText(eightStr);
+
+        //change text for labels
+        PtHeightLable.setText("");
+        PtHeightLable2.setText("Patient's Height in cm");
+
+        //remove easter egg text
+        EasterEgg.setText("");
+
+
+        PrinterJob job = PrinterJob.createPrinterJob();
+        if (job != null) {
+            boolean success = job.printPage(VBoxDoc);
+            if (success) {
+                job.endJob();
+            }
+        }
+
+    }
+    // easter egg text set up
+    public void EggFun() {
+        EasterEgg.setText("Nick is awesome!");
+
+    }
+}
