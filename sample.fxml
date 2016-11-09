@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<VBox fx:id="VBoxDoc" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="490.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <AnchorPane maxWidth="500.0" prefHeight="60.0" prefWidth="500.0">
+            <children>
+                <TextField alignment="CENTER" editable="false" layoutX="25.0" layoutY="8.0" maxHeight="44.0" minHeight="44.0" opacity="0.51" prefHeight="44.0" prefWidth="452.0" text="ARDSnet" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="23.0">
+                    <font>
+                        <Font name="Serif Bold" size="31.0" />
+                    </font>
+                    <effect>
+                        <Lighting diffuseConstant="1.09" specularConstant="0.44" specularExponent="38.6" surfaceScale="6.62">
+                            <bumpInput>
+                                <Shadow />
+                            </bumpInput>
+                            <light>
+                                <Light.Distant azimuth="304.53" elevation="53.37" />
+                            </light>
+                        </Lighting>
+                    </effect>
+                </TextField>
+            <Label fx:id="EasterEgg" layoutX="320.0" layoutY="20.0" onMousePressed="#EggFun" prefHeight="20.0" prefWidth="136.0" textFill="#22bfa8">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane maxWidth="500.0" minWidth="-Infinity" prefHeight="149.0" prefWidth="500.0">
+            <children>
+                <HBox layoutX="52.0" layoutY="37.0" />
+                <RadioButton fx:id="RadioFemale" layoutX="32.0" layoutY="82.0" mnemonicParsing="false" text="Female" textAlignment="CENTER" AnchorPane.leftAnchor="32.0">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="radioGroup" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="RadioMale" layoutX="32.0" layoutY="29.0" mnemonicParsing="false" selected="true" text="Male" textAlignment="CENTER" toggleGroup="$radioGroup" AnchorPane.leftAnchor="32.0">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </RadioButton>
+                <TextField fx:id="FourMl" alignment="CENTER" editable="false" layoutX="369.0" layoutY="7.0" maxWidth="70.0" AnchorPane.leftAnchor="369.0">
+                    <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                    <effect>
+                        <BoxBlur height="0.0" iterations="0" width="0.0">
+                            <input>
+                                <Blend />
+                            </input>
+                        </BoxBlur>
+                    </effect>
+                </TextField>
+                <TextField fx:id="FiveMl" alignment="CENTER" layoutX="369.0" layoutY="38.0" maxWidth="70.0" AnchorPane.leftAnchor="369.0">
+                    <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                    <effect>
+                        <BoxBlur height="0.0" iterations="0" width="0.0">
+                            <input>
+                                <Blend />
+                            </input>
+                        </BoxBlur>
+                    </effect>
+                </TextField>
+                <TextField fx:id="SixMl" alignment="CENTER" layoutX="369.0" layoutY="67.0" maxWidth="70.0" AnchorPane.leftAnchor="369.0">
+                    <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                    <effect>
+                        <BoxBlur height="0.0" iterations="0" width="0.0">
+                            <input>
+                                <Blend />
+                            </input>
+                        </BoxBlur>
+                    </effect>
+                </TextField>
+                <TextField fx:id="SevenMl" alignment="CENTER" layoutX="369.0" layoutY="94.0" maxWidth="70.0" AnchorPane.leftAnchor="369.0">
+                    <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                    <effect>
+                        <BoxBlur height="0.0" iterations="0" width="0.0">
+                            <input>
+                                <Blend />
+                            </input>
+                        </BoxBlur>
+                    </effect>
+                </TextField>
+                <TextField fx:id="EightMl" alignment="CENTER" layoutX="369.0" layoutY="122.0" maxWidth="70.0" AnchorPane.leftAnchor="369.0">
+                    <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                    <effect>
+                        <BoxBlur height="0.0" iterations="0" width="0.0">
+                            <input>
+                                <Blend />
+                            </input>
+                        </BoxBlur>
+                    </effect>
+                </TextField>
+                <Label layoutX="298.0" layoutY="6.0" text="4 ml/kg :" AnchorPane.leftAnchor="298.0">
+                    <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </padding>
+                </Label>
+                <Label layoutX="298.0" layoutY="37.0" text="5 ml/kg :" AnchorPane.leftAnchor="298.0">
+                    <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </padding>
+                </Label>
+                <Label layoutX="298.0" layoutY="69.0" text="6 ml/kg :" AnchorPane.leftAnchor="298.0">
+                    <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </padding>
+                </Label>
+                <Label layoutX="298.0" layoutY="95.0" text="7 ml/kg :" AnchorPane.leftAnchor="298.0">
+                    <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </padding>
+                </Label>
+                <Label layoutX="298.0" layoutY="121.0" text="8 ml/kg :" AnchorPane.leftAnchor="298.0">
+                    <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </padding>
+                </Label>
+                <TextField fx:id="PtHeight" layoutX="163.0" layoutY="55.0" maxWidth="50.0" onAction="#HeightInput" onInputMethodTextChanged="#HeightInput" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="163.0">
+                    <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                    </font>
+                </TextField>
+                <Label fx:id="PtHeightLable" layoutX="114.0" layoutY="11.0" text="Type Pt's Height in cm" AnchorPane.bottomAnchor="118.0" AnchorPane.leftAnchor="114.0">
+                    <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="448.0" layoutY="11.0" text="ml">
+                    <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="448.0" layoutY="41.0" text="ml">
+                    <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="448.0" layoutY="74.0" text="ml">
+                    <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="448.0" layoutY="99.0" text="ml">
+                    <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="448.0" layoutY="126.0" text="ml">
+                    <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                    </font>
+                </Label>
+            <Label fx:id="PtHeightLable2" layoutX="131.0" layoutY="31.0" text="and press &quot;Enter&quot;">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            </children>
+            <VBox.margin>
+                <Insets left="3.0" right="3.0" />
+            </VBox.margin>
+            <effect>
+                <SepiaTone>
+                    <input>
+                        <Lighting>
+                            <bumpInput>
+                                <Shadow />
+                            </bumpInput>
+                            <light>
+                                <Light.Distant />
+                            </light>
+                        </Lighting>
+                    </input>
+                </SepiaTone>
+            </effect>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+        </AnchorPane>
+        <AnchorPane maxWidth="500.0" minWidth="500.0" prefHeight="508.0" prefWidth="500.0">
+            <children>
+                <ImageView fx:id="ImgFirst" fitHeight="248.0" fitWidth="458.0" layoutX="14.0" layoutY="232.0" pickOnBounds="true" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="28.0">
+                    <image>
+                        <Image url="@ventilator_protocol_2008-07-page-002.jpg" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="ImgSecond" fitHeight="240.0" fitWidth="458.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="28.0">
+                    <image>
+                        <Image url="@ventilator_protocol_2008-07-page-001.jpg" />
+                    </image>
+                </ImageView>
+            </children>
+            <effect>
+                <DropShadow />
+            </effect>
+        </AnchorPane>
+    </children>
+</VBox>
