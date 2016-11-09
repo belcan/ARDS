@@ -1,0 +1,26 @@
+import javafx.stage.Stage;
+
+public class Main extends Application {
+
+
+
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        primaryStage.setTitle("ARDSnet");
+        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setMinWidth(500);
+        primaryStage.setMinHeight(750);
+        primaryStage.show();
+
+    }
+
+
+    public static void main(String[] args) {
+        launch(args);
+
+       // Controller Contr = new Controller();
+
+       // Contr.EggFun();
+    }
+}
